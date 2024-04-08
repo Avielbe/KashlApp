@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "KashlApp",
-    "slug": "KashlApp",
+    "name": "KashlApp1",
+    "slug": "KashlApp1",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/Logo1.png",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/Logo2.png",
+      "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,17 +19,17 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/Logo1.png",
+        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.avielbe.KashlApp"
+      "package": "com.avielbe.KashlApp1"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "823f969c-9ff3-4605-af75-7ad88e82c663"
+        "projectId": "d21bfee7-18ad-4a62-8674-f71b5eb3c8da"
       }
     }
   }
