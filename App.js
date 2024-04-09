@@ -13,7 +13,7 @@ export default function App() {
       try {
         await Font.loadAsync({
           'Assistant': require('./assets/fonts/Assistant.ttf'),
-          'Solitre': require('./assets/fonts/Solitre.ttf'),
+          // 'Solitre': require('./assets/fonts/Solitre.ttf'),
           'Heebo': require('./assets/fonts/Heebo.ttf'),
         });
       } catch (error) {
