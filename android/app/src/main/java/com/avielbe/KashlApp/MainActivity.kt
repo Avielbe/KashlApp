@@ -10,6 +10,11 @@ import com.facebook.react.defaults.DefaultReactActivityDelegate
 
 import expo.modules.ReactActivityDelegateWrapper
 
+import com.facebook.react.ReactRootView
+
+import expo.modules.splashscreen.singletons.SplashScreen
+import expo.modules.splashscreen.SplashScreenImageResizeMode
+
 class MainActivity : ReactActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     // Set the theme to AppTheme BEFORE onCreate to support
@@ -17,6 +22,9 @@ class MainActivity : ReactActivity() {
     // This is required for expo-splash-screen.
     setTheme(R.style.AppTheme);
     super.onCreate(null)
+    // SplashScreen.show(...) has to be called after super.onCreate(...)
+    // Below line is handled by '@expo/configure-splash-screen' command and it's discouraged to modify it manually
+    SplashScreen.show(this, SplashScreenImageResizeMode.CONTAIN, ReactRootView::class.java, false)
   }
 
   /**

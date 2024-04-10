@@ -75,9 +75,9 @@ const Infoscreen = () => {
       <View style={[styles.tableContainer, styles.shadow]}>
          <View style={[styles.row, styles.header]}>
          <Text style={[styles.cell, styles.headerCell]}>סוג ההכשרה:</Text>
-           <Text style={[styles.cell, styles.headerCell]}>ליבון</Text>
-           <Text style={[styles.cell, styles.headerCell]}>הגעלה</Text>
-           <Text style={[styles.cell, styles.headerCell]}>ניקוי</Text>
+           <Text style={[styles.cell, styles.headerCell]}>ליבון🔥</Text>
+           <Text style={[styles.cell, styles.headerCell]}>הגעלה⛲️</Text>
+           <Text style={[styles.cell, styles.headerCell]}>ניקוי🧽</Text>
          </View>
          <View style={styles.row}>
           <Text style={styles.cell}>שימוש רגיל:</Text>

@@ -25,7 +25,9 @@
       "package": "com.avielbe.KashlApp"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "output": "public",
+      "bundler": "metro"
     },
     "extra": {
       "eas": {

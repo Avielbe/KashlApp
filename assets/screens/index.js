@@ -15,6 +15,21 @@ export default {
     Kiraimgas: require('./Kiraimgas.jpeg'),
     Kiraiminduction: require('./Kiraiminduction.jpeg'),
     Aronot: require('./aronot.jpeg'),
+    Plastic: require('./Plastic.jpeg'),
+    Mangalgas: require('./Mangalgas.jpeg'),
+    Mixer: require('./Mixer.jpeg'),
+    Mehonatkafe: require('./Mehonatkafe.jpeg'),
+    Mediah: require('./Mediah.jpeg'),
+    Tinok: require('./Tinok.jpeg'),
+    Motzetz: require('./Motzetz.jpeg'),
+    Kisetinok: require('./Kisetinok.jpeg'),
+
+
+
+
+
+
+
 
 
 
