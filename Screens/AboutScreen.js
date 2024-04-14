@@ -46,7 +46,7 @@ return (
       <View style={styles.section}>
       <Text style={{fontFamily: 'Heebo', fontSize: 11}}>בסייעתא דשמיא</Text>
         <Text style={styles.title}>Kashl-App</Text>
-        <Text style={styles.subtitle}>Version 1.0.0</Text>
+        <Text style={styles.subtitle}>Version 1.0.5</Text>
         <Avatar
           rounded
           source={require('../assets/Logo1.png')}
