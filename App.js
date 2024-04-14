@@ -5,9 +5,11 @@ import AppNavigator from './navigation';
 import CustomLoading from './Screens/CustomLoading';
 import * as Font from 'expo-font';
 
-////
+//// Firebase
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
 ////
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -44,20 +46,22 @@ export default function App() {
   console.log("App.js rendered");
   //////
   // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyDiaHQTzy9NOtak0jlJ0nMIWA5QVWOWII8",
-  authDomain: "kashlapp-89820.firebaseapp.com",
-  projectId: "kashlapp-89820",
-  storageBucket: "kashlapp-89820.appspot.com",
-  messagingSenderId: "233758572323",
-  appId: "1:233758572323:web:dcde469bd16ffeb9835696",
-  measurementId: "G-KCFF9QDXTC"
-};
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDiaHQTzy9NOtak0jlJ0nMIWA5QVWOWII8",
+    authDomain: "kashlapp-89820.firebaseapp.com",
+    projectId: "kashlapp-89820",
+    storageBucket: "kashlapp-89820.appspot.com",
+    messagingSenderId: "233758572323",
+    appId: "1:233758572323:web:dcde469bd16ffeb9835696",
+    measurementId: "G-KCFF9QDXTC"
+  };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const db = getFirestore(app); 
+  const auth = getAuth(app); 
   //////
   return (
     <NavigationContainer>

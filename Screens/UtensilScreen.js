@@ -32,11 +32,6 @@ function UtensilScreen({ route }) {
       <Text style={styles.subtitle}>צורת ההכשרה:</Text>
       {descriptions.map((desc, index) => (
         <View key={index} style={styles.descriptionRow}>
-          <CheckBox
-            checked={checkedItems[index]}
-            onPress={() => handleCheckBoxClick(index)}
-
-          />
           <View style={styles.descriptionTextContainer}>
             <Text style={[
                 styles.descriptionText,
@@ -46,6 +41,10 @@ function UtensilScreen({ route }) {
               {`${desc.trim()}`}
             </Text>
           </View>
+          <CheckBox
+            checked={checkedItems[index]}
+            onPress={() => handleCheckBoxClick(index)}
+          />
         </View>
       ))}
 
@@ -103,6 +102,7 @@ const styles = StyleSheet.create({
   descriptionRow: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'flex-start', 
   },
   descriptionTextContainer: {
     flex: 1,
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     textDecorationLine: 'none',
     fontFamily: 'Heebo',
-    textAlign: 'left',
+    textAlign: 'center',
     alignSelf: 'stretch'
 
   },
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     fontFamily: 'Heebo',
     marginBottom: 6,
-    textAlign: 'left',
+    // textAlign: 'left',
   },
   divider: {
     backgroundColor: '#ccc',
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
     writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr',
   },
   notesText: {
-    textAlign: 'left',
+    textAlign: 'center',
     writingDirection: I18nManager.isRTL ? 'rtl' : 'ltr',
   },
 });

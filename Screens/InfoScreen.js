@@ -25,9 +25,43 @@ const Infoscreen = () => {
       <Text style={styles.title}>🤢הגעלת כלים?
 </Text>
       <Text style={styles.section}>איסור חמץ בפסח הוא אחד האיסורים החמורים בתורה. וגם אם אנו לא צורכים ח׳׳ו חמץ בפסח, הכלים שבהם אנו משתמשים ספגו חמץ, ׳בלעו׳ בלשון חכמים, במהלך השנה.</Text>
+      <Text style={styles.section}>למה הגעלה?</Text>
 <Text style={styles.section}>כשאדם נגעל ממשהו הוא רוצה להוציא אותו החוצה.
 ככה הגעלת חמץ מטרתה להוציא החוצה את החמץ הבלועה בכלי</Text>
 
+       {/* Table Section */}
+       <Text style={styles.title}>טבלת סיכום</Text>
+      <View style={[styles.tableContainer, styles.shadow]}>
+         <View style={[styles.row, styles.header]}>
+           <Text style={[styles.cell, styles.headerCell]}>ליבון🔥</Text>
+           <Text style={[styles.cell, styles.headerCell]}>הגעלה⛲️</Text>
+           <Text style={[styles.cell, styles.headerCell]}>ניקוי🧽</Text>
+           <Text style={[styles.cell, styles.headerCell]}>סוג ההכשרה:</Text>
+
+         </View>
+         <View style={styles.row}>
+           <Text style={styles.cell}>צליה או בישול ישירות מאש גלויה</Text>
+           <Text style={styles.cell}>נוזל רותח</Text>
+           <Text style={styles.cell}>מאכלים קרים</Text>
+           <Text style={styles.cell}>שימוש רגיל:</Text>
+
+         </View>
+         <View style={styles.row}>
+           <Text style={styles.cell}>באמצעות ליבון באש גלויה</Text>
+           <Text style={styles.cell}>באמצעות הגעלה, הכנסה לתוך, מים רותחים. לעיתים מספיק רק עירוי, כלומר שפיכת, מים רותחים.</Text>
+           <Text style={styles.cell}>ניקוי חיצוני ויסודי</Text>
+           <Text style={styles.cell}>צורת ההכשרה</Text>
+
+        </View>
+        <View style={styles.row}>
+           <Text style={styles.cell}>מסוכן להכשיר לבד. עדיף לחפש מקום בו מבצעים הגעלת כלים</Text>
+           <Text style={styles.cell}>כלים קטנים ניתן לקחת סיר גדול, להרתיח את המים לרמת ביעבוע, ואז באמצעות צבט להכניס ולהוציא. או ללכת למקום בו מגעילים כלים</Text>
+           <Text style={styles.cell}>ניקוי יסודי באמצעות חומרי ניקוי שיפגמו את טעם החמץ</Text>
+           <Text style={styles.cell}>איך מכשירים?</Text>
+
+        </View>
+      </View>
+      
       {/* Section 3 */}
       <Text style={styles.title}>🤔למה?</Text>
       <Text style={styles.section}>מתכת מתרחבת בחום ומתקווצת בקור.
@@ -45,59 +79,31 @@ const Infoscreen = () => {
       </Text>
       
       {/* Section 5 */}
-      <Text style={styles.title}>🛍ואם אני קונה כלים חדשים לפסח?
+      <Text style={styles.title}>🛍 ואם אני קונה כלים חדשים לפסח?
       </Text>
       <Text style={styles.section}>מצוין, אבל לא מספיק.</Text>
       <Text style={styles.section}> לכתחילה הכי טוב להשתמש בכלים חדשים לפסח, אבל יש לא מעט כלים שלא ניתן לקנות סט מיוחד לפסח  (לא תחליף שיש או ברזים כל שנה, וגם תנור חדש). וגם לא תמיד יש אפשרות (מטבחים תעשייתים, הוצאה כלכלית, קולפן אבוקדו עתיק שעבר בירושה). לכן טוב לדעת ולרענן את הלכות הכשרת כלים.</Text>
       
       {/* Section 6 */}
       <Text style={styles.title}>כללים נוספים:</Text>
-      <Text style={styles.title}>רוב שימושו</Text>
+      <Text style={styles.title}>☑️רוב שימושו</Text>
       <Text style={styles.section}>לרוב הפוסקים הספרדים: הוכלים אחר רוב תשמישו של הכלי, ואם לפעמים נדירות השתמשו בטמפרטורה מקסימלית ובד״כ בטפרטורה גבוה - מכשירים לפי רוב שימוש
-לעומת זאת הפוסקים האשכנזזים: הולכים לפי החמור. כך שאפילו פעם שהשתמשו בטמפרות מקסימום - זו הטמפרטורה שבה יש להכשיר את המכשיר.
-</Text>
+      לעומת זאת הפוסקים האשכנזזים: הולכים לפי החמור. כך שאפילו פעם שהשתמשו בטמפרות מקסימום - זו הטמפרטורה שבה יש להכשיר את המכשיר.
+      </Text>
       
       {/* Section 7 */}
       <Text style={styles.title}>לאחר ההגעלה</Text>
       <Text style={styles.section}>לכתחילה רצוי להכניס למים צוננים (שהכלי המוכשר ׳ייסגר׳), בדיעבד גם בכלי זהה כלי כשר.
-בדרך כלל רצוי, שהכלי לא יהיה ״בן יומו״, כלומר שלא השתמשו בו ב24 שעות האחרונות.
-כאשר כלי לא בן יומו ניתן להגעיל כליים בשרים וחלבים יחד (נניח סכין בשרית עם סכין חלבי)
-</Text>
+      בדרך כלל רצוי, שהכלי לא יהיה ״בן יומו״, כלומר שלא השתמשו בו ב24 שעות האחרונות.
+      כאשר כלי לא בן יומו ניתן להגעיל כליים בשרים וחלבים יחד (נניח סכין בשרית עם סכין חלבי)
+      </Text>
 
       {/* Section 8 */}
-      <Text style={styles.title}>אפילו פעם אחת</Text>
+      <Text style={styles.title}>🆕אפילו פעם אחת</Text>
       <Text style={styles.section}>כלי שהתמשו בו לחמץ אפילו פעם אחת, צריך הכשרה לפסח.
-כלי שלא השתמשו בו מעולם הוא נחשב כשר לפסח
-</Text>
+      כלי שלא השתמשו בו מעולם הוא נחשב כשר לפסח
+      </Text>
 
-      {/* Table Section */}
-      <Text style={styles.title}>טבלת סיכום</Text>
-      <View style={[styles.tableContainer, styles.shadow]}>
-         <View style={[styles.row, styles.header]}>
-         <Text style={[styles.cell, styles.headerCell]}>סוג ההכשרה:</Text>
-           <Text style={[styles.cell, styles.headerCell]}>ליבון🔥</Text>
-           <Text style={[styles.cell, styles.headerCell]}>הגעלה⛲️</Text>
-           <Text style={[styles.cell, styles.headerCell]}>ניקוי🧽</Text>
-         </View>
-         <View style={styles.row}>
-          <Text style={styles.cell}>שימוש רגיל:</Text>
-           <Text style={styles.cell}>צליה או בישול ישירות מאש גלויה</Text>
-           <Text style={styles.cell}>נוזל רותח</Text>
-           <Text style={styles.cell}>מאכלים קרים</Text>
-         </View>
-         <View style={styles.row}>
-           <Text style={styles.cell}>צורת ההכשרה</Text>
-           <Text style={styles.cell}>באמצעות ליבון באש גלויה</Text>
-           <Text style={styles.cell}>באמצעות הגעלה, הכנסה לתוך, מים רותחים. לעיתים מספיק רק עירוי, כלומר שפיכת, מים רותחים.</Text>
-           <Text style={styles.cell}>ניקוי חיצוני ויסודי</Text>
-        </View>
-        <View style={styles.row}>
-           <Text style={styles.cell}>איך מכשירים?</Text>
-           <Text style={styles.cell}>מסוכן להכשיר לבד. עדיף לחפש מקום בו מבצעים הגעלת כלים</Text>
-           <Text style={styles.cell}>כלים קטנים ניתן לקחת סיר גדול, להרתיח את המים לרמת ביעבוע, ואז באמצעות צבט להכניס ולהוציא. או ללכת למקום בו מגעילים כלים</Text>
-           <Text style={styles.cell}>ניקוי יסודי באמצעות חומרי ניקוי שיפגמו את טעם החמץ</Text>
-        </View>
-      </View>
 
           {/* Section 10 */}
           <Text style={styles.title}>📞 תמיד טוב לשאול</Text>
@@ -123,7 +129,7 @@ const Infoscreen = () => {
 
       {/* <Notes */}
       <View style={styles.linkList}>
-      <Text style={styles.title}>🛡 ונשרמתם</Text>
+      <Text style={styles.title}>🔔 ונשרמתם</Text>
 
         <Text style={styles.section}>
           האפליקציה נועדה לזיכוי הרבים. האחריות ההלכתית והפיזית בשימוש האפליקציה על המשתמש בלבד. כמובן,
@@ -157,7 +163,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 20,
     fontFamily: 'Heebo',
-    textAlign: 'left',
+    // textAlign: 'left',
+    textAlign: 'center',
     padding: 5,
     paddingHorizontal: 15,
     

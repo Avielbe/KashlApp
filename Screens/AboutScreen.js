@@ -9,15 +9,17 @@ const AboutScreen = () => {
     const subject = 'אהלן! רציתי להגיד משהו על האפליקציה';
     const body = 'מה נשמע?';
     const url = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
     Linking.openURL(url);
   };
 
-  const handleWhatsAppPress = () => {
-    const phone = '+972546647042';
-    const text = 'מה נשמע?';
-    const url = `whatsapp://send?phone=${phone}&text=${encodeURIComponent(text)}`;
-
+  // const handleWhatsAppPress = () => {
+  //   const phone = '+972546647042';
+  //   const text = 'מה נשמע?';
+  //   const url = `whatsapp://send?phone=${phone}&text=${encodeURIComponent(text)}`;
+  //   Linking.openURL(url);
+  // };
+  const handleLinkedInPress = () => {
+    const url = 'https://www.linkedin.com/in/aviel-ben-eliyahu'; // Replace with your LinkedIn URL
     Linking.openURL(url);
   };
   // const sourceData = [
@@ -78,6 +80,18 @@ return (
         <Button
           icon={
             <Icon
+              name='linkedin'
+              type='font-awesome'
+              color='#0077b5' // LinkedIn blue color
+              size={15}
+            />
+          }
+          title="LinkedIn" // Text in Hebrew
+          onPress={handleLinkedInPress}
+        />
+        {/* <Button
+          icon={
+            <Icon
               name='whatsapp'
               type='font-awesome'
               color='#25D366'
@@ -86,7 +100,7 @@ return (
           }
           title="לשליחת ווטסאפ"
           onPress={handleWhatsAppPress}
-        />
+        /> */}
       </View>
       {/* <ScrollView> */}
       <View style={styles.section}>

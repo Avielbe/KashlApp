@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { View, Text, Button,TouchableOpacity ,FlatList, StyleSheet, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
@@ -38,7 +39,7 @@ const HomeScreen = () => {
     <ScrollView style={styles.container}>
       {/* Custom Header with Stylish SearchBar */}
       <Header
-        containerStyle={styles.headerContainer}
+        containerStyle={[styles.headerContainer, { flex: 1, justifyContent: 'space-between' }]}
         leftComponent={
           <TouchableOpacity onPress={handleNavigateToInfo}>
             <Text style={styles.buttonText}>כללי הכשרה</Text>
@@ -52,6 +53,7 @@ const HomeScreen = () => {
             containerStyle={styles.searchContainer} // Custom styles
             inputContainerStyle={styles.searchInputContainer} // Custom styles
             inputStyle={styles.searchInput} // Custom styles
+            flex={0.5}
           />
         }
         rightComponent={
@@ -104,22 +106,27 @@ const styles = StyleSheet.create({
   },
   // Styles for Stylish SearchBar
   searchContainer: {
-    flex: 1, // Adjust width if needed
+    flex: 0.5, // 1 Adjust width if needed
     alignItems: 'center',
     backgroundColor: 'transparent', // Remove default background color
+     width: '80%',
   },
   searchInputContainer: {
     backgroundColor: 'white', // Set background color
     borderRadius: 10, // Add border radius for rounded corners
-    width: '90%', // Adjust width
+    // width: '80%', // Adjust width
+    flex: 0.5,
+    padding: 3,
+    
   },
   searchInput: {
-    textAlign: 'center', // Maintain right alignment
+    textAlign: 'left', // Maintain right alignment
     fontSize: 16, // Adjust font size
     color: '#333', // Set text color
   },
   button: {
-    width: '60%', // Adjust this value as needed
+    // width: '60%', // Adjust this value as needed
+    flex: 0.25,
     // Other styles...
   },
   buttonText: {

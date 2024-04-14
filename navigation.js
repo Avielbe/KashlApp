@@ -1,20 +1,47 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { BackHandler, Platform } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { useNavigation } from '@react-navigation/native'; // Import useNavigation
+
 import HomeScreen from './Screens/HomeScreen'; 
 import AboutScreen from './Screens/AboutScreen';
 import Info from './Screens/InfoScreen';
 import UtensilScreen from './Screens/UtensilScreen';
-import CustomHeader from './Screens/CustomHeader';
 import CustomHeaderMini from './Screens/CustomHeaderMini';
+
 const Stack = createStackNavigator();
 
 const AppNavigator = () => {
+  const navigation = useNavigation(); // Get navigation reference
+
+  useEffect(() => {
+    const handleBackPress = () => {
+      // Navigate back to Home on back button press
+      navigation.navigate('Home');
+      // OR: Navigate back to the first screen (likely Home)
+      // navigation.popToTop();
+      return true; // Prevent default back behavior
+    };
+
+    const backHandler = Platform.OS === 'web' ? handleBackPress : BackHandler.addEventListener(
+      'hardwareBackPress',
+      handleBackPress
+    );
+
+    return () => {
+      if (Platform.OS !== 'web') {
+        backHandler.remove();
+      }
+    };
+  }, [navigation]); // Add navigation to dependency array to re-register listener
+
+
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="Home">
       <Stack.Screen
         name="Home"
         component={HomeScreen}
-        options={{ headerShown: false }} // Hide the header for HomeScreen
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="About"
@@ -27,10 +54,11 @@ const AppNavigator = () => {
         name="Info"
         component={Info}
         options={{ 
-          header: (props) => <CustomHeaderMini {...props} title="כללי הכשרה" />,        }}
+          header: (props) => <CustomHeaderMini {...props} title="כללי הכשרה" />, 
+        }}
       />
       <Stack.Screen
-        name={"UtensilScreen"}  // Use the correct component name
+        name="UtensilScreen"
         component={UtensilScreen}
         options={({ route }) => ({
           header: (props) => <CustomHeaderMini {...props} title={route.params?.utensilData?.name ?? 'הכשרת כלים'} />,
@@ -42,7 +70,54 @@ const AppNavigator = () => {
 
 export default AppNavigator;
 
-/////////
+
+
+
+// import React from 'react';
+// import { createStackNavigator } from '@react-navigation/stack';
+// import HomeScreen from './Screens/HomeScreen'; 
+// import AboutScreen from './Screens/AboutScreen';
+// import Info from './Screens/InfoScreen';
+// import UtensilScreen from './Screens/UtensilScreen';
+// // import CustomHeader from './Screens/CustomHeader';
+// import CustomHeaderMini from './Screens/CustomHeaderMini';
+// const Stack = createStackNavigator();
+
+// const AppNavigator = () => {
+//   return (
+//     <Stack.Navigator>
+//       <Stack.Screen
+//         name="Home"
+//         component={HomeScreen}
+//         options={{ headerShown: false }} // Hide the header for HomeScreen
+//       />
+//       <Stack.Screen
+//         name="About"
+//         component={AboutScreen}
+//         options={{
+//           header: (props) => <CustomHeaderMini {...props} title="אודות" />,
+//         }}
+//       />
+//       <Stack.Screen
+//         name="Info"
+//         component={Info}
+//         options={{ 
+//           header: (props) => <CustomHeaderMini {...props} title="כללי הכשרה" />,        }}
+//       />
+//       <Stack.Screen
+//         name={"UtensilScreen"}  // Use the correct component name
+//         component={UtensilScreen}
+//         options={({ route }) => ({
+//           header: (props) => <CustomHeaderMini {...props} title={route.params?.utensilData?.name ?? 'הכשרת כלים'} />,
+//         })}
+//       />
+//     </Stack.Navigator>
+//   );
+// };
+
+// export default AppNavigator;
+
+// /////////
 // import React from 'react';
 // import { createStackNavigator } from '@react-navigation/stack';
 // import HomeScreen from './Screens/HomeScreen'; 
