@@ -1,6 +1,5 @@
-import React from 'react';
-import { View, ScrollView, Text,FlatList,SectionList, StyleSheet } from 'react-native';
-import { Linking } from 'react-native';
+import React, { useState } from 'react';
+import { View, ScrollView, Text,FlatList,SectionList, StyleSheet, Linking } from 'react-native';
 
 
 const Infoscreen = () => {
@@ -11,7 +10,21 @@ const Infoscreen = () => {
     { title: 'כושרות', url: 'https://www.kosharot.co.il/' },
     { title: 'הידברות', url: 'https://www.hidabroot.org/' },
     { title: 'חב׳׳ד בתנופה', url: 'https://www.hametz.co.il/' },
+    { title: 'דין', url: 'https://din.org.il/' },
+
   ];
+
+  
+  const phoneNumbers = [
+      { number: '073-333-3300', label: 'קו ההלכה של הידברות' },
+      { number: '073-360-9616', label: 'מוקד ההלכות בית מרן' },
+  ];
+  
+  const handlePhoneCall = (phoneNumber) => {
+      const url = `tel:${phoneNumber}`;
+      Linking.openURL(url);
+  };
+
   const handleOpenURL = (url) => {
     Linking.openURL(url);
   };
@@ -25,7 +38,7 @@ const Infoscreen = () => {
       <Text style={styles.title}>🤢הגעלת כלים?
 </Text>
       <Text style={styles.section}>איסור חמץ בפסח הוא אחד האיסורים החמורים בתורה. וגם אם אנו לא צורכים ח׳׳ו חמץ בפסח, הכלים שבהם אנו משתמשים ספגו חמץ, ׳בלעו׳ בלשון חכמים, במהלך השנה.</Text>
-      <Text style={styles.section}>למה הגעלה?</Text>
+      <Text style={styles.section}>למה זה נראה "הגעלה"?</Text>
 <Text style={styles.section}>כשאדם נגעל ממשהו הוא רוצה להוציא אותו החוצה.
 ככה הגעלת חמץ מטרתה להוציא החוצה את החמץ הבלועה בכלי</Text>
 
@@ -63,7 +76,7 @@ const Infoscreen = () => {
       </View>
       
       {/* Section 3 */}
-      <Text style={styles.title}>🤔למה?</Text>
+      <Text style={styles.title}>🤔למה לא מספיק לנקות וזהו?</Text>
       <Text style={styles.section}>מתכת מתרחבת בחום ומתקווצת בקור.
       כאשר מבשלים בטמפרטורה גבוה או בנוזלים רותחים, הכלי מתרחב מעט, ונכנסים בו שאריות קטנות של חמץ, כאשר מסיימים את הבישול, ההתרחבות נסגרת והחמץ נשאר בלוע בכלי. אם נשתמש בכלי כמו שהוא בפסח, אותם שאריות מזעריות של חמץ ילטו החוצה לתוך המאכל ויתערבבו חס חלילה במאכל הכשר לפסח. נכון אומנם שאלו שאריות קטנות, אבל חמץ בפסח גם בכמות קטנה ביותר, כאשר הוא מתבשל בחום הוא הופך את כל המאשכל לחמץ.
       </Text>
@@ -92,7 +105,7 @@ const Infoscreen = () => {
       </Text>
       
       {/* Section 7 */}
-      <Text style={styles.title}>לאחר ההגעלה</Text>
+      <Text style={styles.title}>❄️לאחר ההגעלה</Text>
       <Text style={styles.section}>לכתחילה רצוי להכניס למים צוננים (שהכלי המוכשר ׳ייסגר׳), בדיעבד גם בכלי זהה כלי כשר.
       בדרך כלל רצוי, שהכלי לא יהיה ״בן יומו״, כלומר שלא השתמשו בו ב24 שעות האחרונות.
       כאשר כלי לא בן יומו ניתן להגעיל כליים בשרים וחלבים יחד (נניח סכין בשרית עם סכין חלבי)
@@ -104,18 +117,36 @@ const Infoscreen = () => {
       כלי שלא השתמשו בו מעולם הוא נחשב כשר לפסח
       </Text>
 
-
           {/* Section 10 */}
-          <Text style={styles.title}>📞 תמיד טוב לשאול</Text>
-      <Text style={styles.section}>ניסינו ללקט ממקורות שונים את עיקרי ההלכות, אך תמיד יכולים ליפול טעויות.
-      בכל מקרה של ספק, תמיד מומלץ לשאול רב.
-      יש גם מוקדים טלפונים בהם ניתן לקבל מענה הלכה מרב בכל קשה, ובכל עניין הלכתי:
-      קו ההלכה של הידברות 073-333-3300
-      מוקד ההלכות בית מרן  073-360-9616
-      ואם מכירים מוקדים נוספים מוזמנים ליצור קשר ונוסיף בגרסה הבאה.
-      </Text>
+          
+          <View>
+            <Text style={styles.title}>📞 תמיד טוב לשאול</Text>
+            <Text style={styles.section}>ניסינו ללקט ממקורות שונים את עיקרי ההלכות, אך תמיד יכולים ליפול טעויות.
+              בכל מקרה של ספק, תמיד מומלץ לשאול רב.
+              יש גם מוקדים טלפונים בהם ניתן לקבל מענה הלכה מרב בכל קשה, ובכל עניין הלכתי:
+            </Text>
+            {phoneNumbers.map((phoneNumberObject) => (
+              <Text key={phoneNumberObject.number} style={styles.phoneNumber}>
+                • {phoneNumberObject.label}: <Text style={styles.clickableNumber} onPress={() => handlePhoneCall(phoneNumberObject.number)}>
+                  {phoneNumberObject.number}
+                </Text>
+              </Text>
+            ))}
+          </View>
 
-      {/* <Sources> */}
+
+      {/* <Notes */}
+      <View style={styles.linkList}>
+      <Text style={styles.title}>🔔 ונשמרתם</Text>
+
+        <Text style={styles.section}>
+          האפליקציה נועדה לזיכוי הרבים. האחריות ההלכתית והפיזית בשימוש האפליקציה על המשתמש בלבד. כמובן,
+          יש לנהוג בזהירות בעת הכשרת הכלים.
+        </Text>
+      </View>
+
+      {/* </ScrollView> */}
+        {/* <Sources> */}
       <View style={styles.linkList}>
         <Text style={styles.title}>📚  מקורות הלכתיים </Text>
         <View>
@@ -126,19 +157,6 @@ const Infoscreen = () => {
           ))}
         </View>
       </View>
-
-      {/* <Notes */}
-      <View style={styles.linkList}>
-      <Text style={styles.title}>🔔 ונשרמתם</Text>
-
-        <Text style={styles.section}>
-          האפליקציה נועדה לזיכוי הרבים. האחריות ההלכתית והפיזית בשימוש האפליקציה על המשתמש בלבד. כמובן,
-          יש לנהוג בזהירות בעת הכשרת הכלים.
-        </Text>
-      </View>
-
-      {/* </ScrollView> */}
-
 
 
     </ScrollView>
