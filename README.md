@@ -32,37 +32,42 @@ bash
 Copy code
 expo start
 
-Usage
+## Usage
 KashlApp is designed to be user-friendly, ensuring easy operation for both adults and non-traditionalists. Follow the on-screen instructions to navigate and use the app.
 
-Screenshots
-Include screenshots here (upload images to your repository and reference them in the README). For example:
+## Screenshots
+  ```markdown
+     ![Home Screen](./assets/screenshots/home.png)
+     ![Search Tool](./assets/screenshots/search.png)
+     ```
 
 
-Technologies Used
+## Technologies Used
 React Native
 Expo
 React Native Elements
 Google Firebase Hosting
 iPhone Emulator (Xcode)
 Android Emulator (Android Studio)
-Project Structure
+
+## Project Structure
 The application template was created using Expo. The main file is App.js, and there's a navigation file that manages the navigation between screens. The assets folder contains images, fonts, and a JSON file with the primary information used to render screens and buttons on the home screen.
 
-Future Development
+## Future Development
 Additional features and improvements are planned for future updates.
 The app currently has minor glitches due to the rapid conversion from a mobile app to a web app.
-License
+
+## License
 This project is licensed under a free license. All information and images were created by the developer, Aviel Ben-Eliyahu, using open-source and AI tools, without requiring permissions from others.
 
-Author
+## Author
 Aviel Ben-Eliyahu - Main developer, initiator, writer, advertiser, and editor.
 
-Contact
+## Contact
 For any inquiries or suggestions, please contact me at avielmbe@gmail.com.
 
-Online Application
+## Online Application
 You can access the online application at the following links:
-
-KashlApp on Firebase
-TinyURL Link to KashlApp
+https://kashlapp-89820.web.app/
+or
+https://tinyurl.com/kashl-app
