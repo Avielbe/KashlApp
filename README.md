@@ -1,26 +1,21 @@
 
-     ![Home Screen](./assets/screenshots/1.jpeg)
+![Main](./assets/screenshots/1.jpeg)
+
 # KashlApp
 
-*KashlApp* is a cleverly named application derived from the Hebrew acronym "kashlap," meaning "kosher for Passover." The app is designed to aid observant Jews in preparing for Passover by consolidating the laws of training tools for the holiday into a simple, visual, and easy-to-read format.
-
 ## Description
-
-KashlApp is a niche application aimed at helping observant Jews of all ages prepare for Passover efficiently. It provides comprehensive laws and guidelines for preparing tools for the holiday, presented in a user-friendly manner. The development of KashlApp, from learning React Native from scratch to launching the web app, was completed within a month. The app was originally intended for the Google Play Store but was converted to a web application on Google Firebase within three days due to technical and bureaucratic challenges. While there are minor glitches, ongoing improvements and additional features are planned for future updates.
+*KashlApp* (a clever play on the Hebrew word "kashlap" for "kosher for Passover") empowers observant Jews of all backgrounds to prepare for Passover with ease and confidence. It brings together a comprehensive collection of laws and guidelines for utensils (Kelim) used during the holiday, presented in a clear, visual, and user-friendly format. No matter your observance level, KashlApp simplifies ensuring your Passover tools are properly prepared.
 
 ## Features
-
-- Detailed laws and guidelines for preparing for Pesach
-- Convenient search functionality for finding specific tools
-- Intuitive and easy-to-use interface suitable for all users
-
+- Detailed Laws (Halachot) & Search: KashlApp provides a wealth of information about Passover training tools, covering various utensil types, cookware, and other relevant items. The convenient search functionality lets you quickly find specific tools and their preparation instructions.
+- Intuitive Interface: Designed for simplicity, KashlApp's interface is easy for users of all ages and technical experience.
 
 ## Usage
 KashlApp is designed to be user-friendly, ensuring easy operation for both adults and non-traditionalists. Follow the on-screen instructions to navigate and use the app.
 
 ## Screenshots
  markdown
-     ![Home Screen](./assets/screenshots/home.jpeg)
+     ![Home Screen](./assets/screenshots/2.jpg)
      ![Utensil Screen](./assets/screenshots/kli.jpeg)
 
 
@@ -49,10 +44,11 @@ Aviel Ben-Eliyahu - Main developer, initiator, writer, advertiser, and editor.
 For any inquiries or suggestions, please get in touch with me at avielmbe@gmail.com.
 
 ## Online Application
-You can access the online application at the following links:
-https://kashlapp-89820.web.app/
-or
-https://tinyurl.com/kashl-app
+You can access the online application at the following link:
+https://tinyurl.com/Kashl-App
+
+
+
 
 ## Installation
 
