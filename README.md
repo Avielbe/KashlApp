@@ -10,19 +10,18 @@
 - Detailed Laws (Halachot) & Search: KashlApp provides a wealth of information about Passover training tools, covering various utensil types, cookware, and other relevant items. The convenient search functionality lets you quickly find specific tools and their preparation instructions.
 - Intuitive Interface: Designed for simplicity, KashlApp's interface is easy for users of all ages and technical experience.
 
-## Screenshots
- markdown
-     ![Home Screen](./assets/screenshots/2.jpg)
-     ![Utensil Screen](./assets/screenshots/3.jpg)
+## Screenshots 
+ ![Home Screen](./assets/screenshots/2.jpg)
+ ![Utensil Screen](./assets/screenshots/3.jpg)
 
 
 ## Technologies Used
-React Native
-Expo
-React Native Elements
-Google Firebase Hosting
-iPhone Emulator (Xcode)
-Android Emulator (Android Studio)
+- React Native
+- Expo
+- React Native Elements
+- Google Firebase Hosting
+- iPhone Emulator (Xcode)
+- Android Emulator (Android Studio)
 
 ## Online Application
 You can access the online application at the following link:
