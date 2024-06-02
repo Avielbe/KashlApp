@@ -19,14 +19,18 @@ To run this project locally, follow these steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/KashlApp.git
+   
 Navigate to the project directory:
-bash
-Copy code
+   ```bash
 cd KashlApp
+```
+
 Install the dependencies:
-bash
+   ```bash
 Copy code
 npm install
+```
+
 Start the development server:
 bash
 Copy code
@@ -36,10 +40,10 @@ expo start
 KashlApp is designed to be user-friendly, ensuring easy operation for both adults and non-traditionalists. Follow the on-screen instructions to navigate and use the app.
 
 ## Screenshots
-  ```markdown
-     ![Home Screen](./assets/screenshots/home.png)
+ markdown
+     ![Home Screen](./assets/screenshots/home.jpeg)
      ![Search Tool](./assets/screenshots/search.png)
-     ```
+
 
 
 ## Technologies Used
